@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Desa Kuta Ujung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: #1d3557;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #2a4d69;
+      padding: 1rem;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a, nav button {
+      background: white;
+      color: #1d3557;
+      padding: 10px 20px;
+      text-decoration: none;
+      border: none;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    nav a:hover, nav button:hover {
+      background: #e0e0e0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: #1d3557;
+      margin-top: 40px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+    th {
+      background: #1d3557;
+      color: white;
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-top: 4px;
+    }
+    button.small {
+      margin-top: 10px;
+      background: #1d3557;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+    button.small:hover {
+      background: #457b9d;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dashboard Admin Desa Kuta Ujung</h1>
+  </header>
+
+  <nav>
+    <a href="#sambutan">Sambutan</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#fasilitas">Fasilitas</a>
+    <a href="#struktur">Struktur</a>
+    <a href="#penduduk">Penduduk</a>
+    <button onclick="saveAll()">💾 Simpan Semua</button>
+    <button onclick="logout()">🚪 Logout</button>
+  </nav>
+
+  <div class="container">
+    <h2 id="sambutan">Sambutan Kepala Desa</h2>
+    <textarea rows="5" id="sambutanInput">Selamat datang di website resmi Desa Kuta Ujung...</textarea>
+
+    <h2 id="agenda">Agenda Desa</h2>
+    <table id="agendaTable">
+      <tr><th>Tanggal</th><th>Judul</th><th>Lokasi</th><th>Deskripsi</th></tr>
+      <tr>
+        <td><input type="text" value="5 Jul"></td>
+        <td><input type="text" value="Musyawarah Pembangunan"></td>
+        <td><input type="text" value="Balai Desa"></td>
+        <td><input type="text" value="Penyusunan rencana pembangunan"></td>
+      </tr>
+    </table>
+    <button class="small" onclick="addRow('agendaTable', 4)">Tambah Agenda</button>
+
+    <h2 id="fasilitas">Fasilitas Umum</h2>
+    <table id="fasilitasTable">
+      <tr><th>Nama Fasilitas</th></tr>
+      <tr><td><input type="text" value="Masjid"></td></tr>
+    </table>
+    <button class="small" onclick="addRow('fasilitasTable', 1)">Tambah Fasilitas</button>
+
+    <h2 id="struktur">Struktur Pemerintah</h2>
+    <table id="strukturTable">
+      <tr><th>Jabatan</th><th>Nama</th></tr>
+      <tr>
+        <td><input type="text" value="Pengulu"></td>
+        <td><input type="text" value="Jamaluddin, S.Pd"></td>
+      </tr>
+    </table>
+    <button class="small" onclick="addRow('strukturTable', 2)">Tambah Struktur</button>
+
+    <h2 id="penduduk">Data Penduduk</h2>
+    <table id="pendudukTable">
+      <tr><th>Dusun</th><th>KK</th><th>Laki-laki</th><th>Perempuan</th><th>Jiwa</th></tr>
+      <tr>
+        <td><input type="text" value="Dusun Burlah"></td>
+        <td><input type="text" value="59"></td>
+        <td><input type="text" value="94"></td>
+        <td><input type="text" value="97"></td>
+        <td><input type="text" value="191"></td>
+      </tr>
+    </table>
+    <button class="small" onclick="addRow('pendudukTable', 5)">Tambah Dusun</button>
+  </div>
+
+  <script>
+    function addRow(tableId, cols) {
+      const table = document.getElementById(tableId);
+      const row = table.insertRow(-1);
+      for (let i = 0; i < cols; i++) {
+        const cell = row.insertCell(i);
+        cell.innerHTML = `<input type="text">`;
+      }
+    }
+
+    function getTableData(tableId) {
+      const rows = document.querySelectorAll(`#${tableId} tr`);
+      const data = [];
+      rows.forEach((row, i) => {
+        if (i === 0) return;
+        const inputs = row.querySelectorAll('input');
+        const rowData = [];
+        inputs.forEach(input => rowData.push(input.value));
+        data.push(rowData);
+      });
+      return data;
+    }
+
+    function saveAll() {
+      const data = {
+        sambutan: document.getElementById('sambutanInput').value,
+        agenda: getTableData('agendaTable'),
+        fasilitas: getTableData('fasilitasTable'),
+        struktur: getTableData('strukturTable'),
+        penduduk: getTableData('pendudukTable')
+      };
+      localStorage.setItem('adminData', JSON.stringify(data));
+      alert('✅ Data berhasil disimpan!');
+    }
+
+    function loadAll() {
+      const saved = localStorage.getItem('adminData');
+      if (!saved) return;
+      const data = JSON.parse(saved);
+      document.getElementById('sambutanInput').value = data.sambutan || '';
+      loadTable('agendaTable', data.agenda);
+      loadTable('fasilitasTable', data.fasilitas);
+      loadTable('strukturTable', data.struktur);
+      loadTable('pendudukTable', data.penduduk);
+    }
+
+    function loadTable(tableId, rowsData) {
+      const table = document.getElementById(tableId);
+      while (table.rows.length > 1) table.deleteRow(1);
+      rowsData.forEach(row => {
+        const newRow = table.insertRow(-1);
+        row.forEach(cell => {
+          const newCell = newRow.insertCell(-1);
+          newCell.innerHTML = `<input type="text" value="${cell}">`;
+        });
+      });
+    }
+
+    function logout() {
+      sessionStorage.removeItem('isLoggedIn');
+      window.location.href = 'login.html';
+    }
+
+    window.onload = function () {
+      if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+        window.location.href = 'login.html';
+        return;
+      }
+      loadAll();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Musyawarah Pembangunan - Desa Kuta Ujung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e6f0f7, #fdfdfd);
+      color: #333;
+      line-height: 1.8;
+    }
+
+    header {
+      background: linear-gradient(to right, #002f4b, #005c97);
+      padding: 50px 20px;
+      color: white;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 8px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .agenda-box {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+      animation: fadeInUp 0.8s ease;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .agenda-box img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+      color: #005c97;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #eef6ff;
+      border-left: 5px solid #0077c2;
+      padding: 12px 18px;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+
+    .info span {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 15px;
+    }
+
+    .highlight {
+      background: #d9ecff;
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 25px;
+      font-weight: 600;
+      color: #004d7a;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 40px;
+      background: #004d7a;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background: #006bb3;
+    }
+
+    footer {
+      background: #002f4b;
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 60px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.7rem;
+      }
+
+      .agenda-box {
+        padding: 25px;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Agenda Desa Kuta Ujung</h1>
+    <p>Musyawarah Rencana Pembangunan Desa</p>
+  </header>
+
+  <div class="container">
+    <div class="agenda-box">
+      <img src="agenda1.png" alt="Musyawarah Pembangunan Desa">
+      
+      <h2>Musyawarah Rencana Pembangunan Desa</h2>
+
+      <div class="info">
+        <span>📅 <strong>Tanggal:</strong> 5 Juli 2025</span>
+        <span>📍 <strong>Lokasi:</strong> Balai Desa Kuta Ujung</span>
+      </div>
+
+      <p>Musrenbang Desa adalah forum penting yang mempertemukan masyarakat dan pemerintah desa untuk menyusun prioritas pembangunan tahun berikutnya. Dalam kegiatan ini, berbagai pihak seperti tokoh masyarakat, perangkat desa, dan warga dari seluruh dusun berdiskusi secara terbuka.</p>
+
+      <p>Kegiatan ini bertujuan menampung aspirasi dari masyarakat, mencakup kebutuhan infrastruktur, pendidikan, pertanian, dan pelayanan kesehatan. Proses ini dilakukan secara transparan dan partisipatif agar pembangunan desa lebih tepat sasaran dan efektif.</p>
+
+      <p>Output dari kegiatan ini menjadi dasar penyusunan Rencana Kerja Pemerintah Desa (RKP Desa) dan usulan Dana Desa.</p>
+
+      <div class="highlight">
+        💡 Partisipasi aktif masyarakat sangat menentukan arah dan keberhasilan pembangunan desa!
+      </div>
+
+      <a href="agenda.html" class="back-button">← Kembali ke Agenda</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Desa Kuta Ujung. Seluruh hak cipta dilindungi.</p>
+  </footer>
+
+</body>
+</html>

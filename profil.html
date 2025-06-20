@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sejarah - Desa Kuta Ujung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f6fafd, #e9f2fc);
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-flex {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      max-width: 1140px;
+      margin: auto;
+      padding: 0 2rem;
+    }
+    .logo-desa {
+      width: 60px;
+      height: 60px;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      color: #1d3557;
+    }
+    header p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    nav {
+      background-color: #1d3557;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0.5rem 1rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 1rem 0;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #fcbf49;
+      border-bottom: 2px solid #fcbf49;
+    }
+    .hero-section {
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+      border-radius: 0 0 40px 40px;
+    }
+    .hero-section h2 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .hero-section p {
+      font-size: 1.2rem;
+    }
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 3rem 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      margin-top: -3rem;
+      position: relative;
+      z-index: 10;
+    }
+    h2.section-title {
+      text-align: center;
+      color: #1d3557;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+    .sejarah-text, .visi-text, .misi-text {
+      font-size: 1.05rem;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    .sejarah-text ol, .misi-text ol {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+    .highlight {
+      background: #fcbf49;
+      color: #1d3557;
+      font-weight: 600;
+      padding: 0.2rem 0.4rem;
+      border-radius: 6px;
+    }
+    .misi-box {
+      background: #f1f9ff;
+      padding: 2rem;
+      border-left: 8px solid #fcbf49;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.05);
+    }
+    .misi-box ol {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+    .misi-box li {
+      margin-bottom: 1rem;
+    }
+    .galeri-desa {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .galeri-desa h2 {
+      color: #1d3557;
+      margin-bottom: 1.5rem;
+    }
+    .galeri-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .galeri-grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .galeri-grid img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background: #1d3557;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-flex">
+      <img src="logo.png" alt="Logo Desa" class="logo-desa" />
+      <div>
+        <h1>Desa Kuta Ujung</h1>
+        <p>Kecamatan Kuta Panjang, Kabupaten Gayo Lues</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="profil.html" class="active">Profil</a></li>
+      <li><a href="data.html">Data Desa</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero-section" style="background-image: linear-gradient(rgba(29,53,87,0.85), rgba(69,123,157,0.85)), url('sejarah-bg.jpg');">
+    <h2>Sejarah Kampung Kuta Ujung</h2>
+    <p>Asal Usul Kampung dari Ujung Gunung Gegarang</p>
+  </section>
+
+  <div class="container">
+    <h2 class="section-title">Riwayat Berdirinya Kampung</h2>
+    <div class="sejarah-text">
+      <p>Pada tahun <span class="highlight">1920</span>, beberapa penduduk dari Kampung Gegarang memutuskan untuk pindah ke daerah ujung gunung guna memelihara ternak dan membuat kandang. Mereka terdiri dari <strong>10 orang</strong>, yaitu:</p>
+      <ol>
+        <li>Datu Lebe Jogam</li>
+        <li>Mat</li>
+        <li>Abdullah</li>
+        <li>Zakaria</li>
+        <li>Selamat</li>
+        <li>Lanang</li>
+        <li>Aji</li>
+        <li>Deman</li>
+        <li>Hamzah</li>
+        <li>Alim</li>
+      </ol>
+      <p>Setelah mereka selesai membangun kandang dan mulai memelihara ternak, mereka pun membangun rumah tempat tinggal untuk menginap dan menjaga ternak tersebut. Seiring berjalannya waktu, tempat tersebut mulai ramai dan semakin banyak orang yang datang bergabung.</p>
+      <p>Kemudian mereka berkumpul dan bermusyawarah untuk memberikan nama tempat yang baru mereka tempati. Hasil dari musyawarah tersebut menyepakati nama <span class="highlight">Kuta Ujung</span>, karena lokasi tersebut berada di bagian paling ujung gunung. Nama ini resmi digunakan sejak tahun <span class="highlight">1925</span> dan tetap digunakan hingga kini.</p>
+      <p>Seluruh penduduk awal tersebut berasal dari Kampung Gegarang, yang sekarang termasuk dalam wilayah Kecamatan Blang Jerango. Setelah nama kampung disepakati, mereka mengangkat <strong>Mat</strong> sebagai <em>penghulu</em> pertama di kampung ini.</p>
+    </div>
+
+    <div class="galeri-desa">
+      <h2>Galeri Foto Desa</h2>
+      <div class="galeri-grid">
+        <img src="desa1.jpg" alt="Pemandangan Desa">
+        <img src="desa2.jpg" alt="Kegiatan Warga">
+        <img src="desa3.jpg" alt="Fasilitas Umum">
+      </div>
+    </div>
+  </div>
+
+  <section class="hero-section" style="margin-top: 4rem; background-image: linear-gradient(rgba(253, 127, 0, 0.85), rgba(255, 191, 73, 0.85)), url('visi-bg.jpg');">
+    <h2>Visi & Misi Kampung</h2>
+    <p>Landasan Pembangunan Menuju Masa Depan Gemilang</p>
+  </section>
+
+  <div class="container">
+    <h2 class="section-title">Visi Kampung</h2>
+    <div class="visi-text">
+      <p><em><strong>“MEWUJUDKAN KAMPUNG KUTA UJUNG YANG MAKMUR, SEJAHTERA DAN ADIL”</strong></em></p>
+    </div>
+
+    <h2 class="section-title">Misi Kampung</h2>
+    <div class="misi-box">
+      <ol>
+        <li>Meningkatkan kinerja Pemerintahan Kampung melalui Profesionalisme tata kelola dan perluasan partisipasi publik.</li>
+        <li>Membangun Masyarakat yang berkualitas dan berdaya saing.</li>
+        <li>Membangun Perekonomian yang kokoh.</li>
+        <li>Mewujudkan Kampung Kuta Ujung yang indah, nyaman, aman, manusiawi dan religi.</li>
+        <li>Menggali potensi sumber daya manusia dan sumber daya alam.</li>
+        <li>Mengokohkan kehidupan sosial kemasyarakatan melalui peningkatan Peran Pemuda, Olahraga, seni dan budaya dalam bingkai kearifan lokal.</li>
+        <li>Memberdayakan potensi di setiap dusunnya sehingga pembangunan tidak monoton di satu dusun.</li>
+      </ol>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Desa Kuta Ujung. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
